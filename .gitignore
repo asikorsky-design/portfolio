@@ -141,6 +141,7 @@ vite.config.ts.timestamp-*
 # Сборка и временные файлы
 dist/
 .astro/
+.zed/
 
 # Зависимости
 node_modules/
