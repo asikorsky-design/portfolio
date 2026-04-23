@@ -1,6 +1,0 @@
-{
-  "ensure_final_newline_on_save": true,
-  "remove_trailing_whitespace_on_save": true,
-  "format_on_save": "off",
-  "auto_indent": "preserve_indent"
-}
