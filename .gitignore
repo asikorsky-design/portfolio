@@ -137,3 +137,13 @@ dist
 # Vite logs files
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
+
+# Сборка и временные файлы
+dist/
+.astro/
+
+# Зависимости
+node_modules/
+
+# Локальные переменные окружения (пароли, ключи)
+*.local
