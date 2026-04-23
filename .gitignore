@@ -3,6 +3,8 @@ HEAD
 dist/
 # generated types
 .astro/
+.zed/
+.zed
 
 # dependencies
 node_modules/
@@ -163,11 +165,6 @@ dist
 # Vite logs files
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
-
-# Сборка и временные файлы
-dist/
-.astro/
-.zed/
 
 # Зависимости
 node_modules/
