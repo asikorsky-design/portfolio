@@ -1,17 +1,42 @@
 ---
-
+// Всё, что находится между символами «---» — это «метаданные компонента». Они никогда не отображаются в браузере.
+import BaseLayout from "../layouts/BaseLayout.astro";
+const identity = {
+    firstName: "Александр",
+    city: "Санкт-Петербург",
+    occupation: "Продуктовый дизайнер",
+    hobbies: ["фотография", "велопрогулки", "вайбкодинг"],
+};
+const skills = [
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "React",
+    "Astro",
+    "Написание документации",
+];
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout title="Главная">
+    <h2 class="text-xl mb-2 mt-8">Несколько фактов обо мне:</h2>
+    <ul>
+        <li>Меня зовут {identity.firstName}.</li>
+        <li>
+            Мой родной город — {identity.city}, а род занятий — {
+                identity.occupation
+            }.
+        </li>
+        {
+            identity.hobbies.length >= 2 && (
+                <li>
+                    Два моих увлечения: {identity.hobbies[0]} и{" "}
+                    {identity.hobbies[2]}.
+                </li>
+            )
+        }
+    </ul>
+    <p>Мои навыки:</p>
+    <ul class="list-inside">
+        {skills.map((skill) => <li class="list-disc">{skill}</li>)}
+    </ul>
+</BaseLayout>
